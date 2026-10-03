@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miguel Trejo | Desarrollador Full Stack &amp; Backend</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#" class="brand">
+      <img src="Fotos/NT.logo.jpg" alt="Logo NT" class="brand-logo">
+      <span>N</span>T
+    </a>
+    <ul class="nav-links">
+      <li><a href="#sobre-mi">Sobre Mí</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge">Disponible para Oportunidades &amp; Proyectos</span>
+      <h1>Miguel Trejo</h1>
+      <h2>Desarrollador Full Stack · Orientado a Backend</h2>
+      <p>Apasionado por resolver problemas reales de manera eficiente mediante arquitectura de software, bases de datos optimizadas y soluciones adaptables.</p>
+      <div class="hero-actions">
+        <a href="#proyectos" class="btn btn-primary">Ver mis Proyectos</a>
+        <a href="#contacto" class="btn btn-secondary">Contacto Directo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-mi" class="section">
+    <div class="container">
+      <h2 class="section-title">Sobre Mí</h2>
+      <div class="about-grid">
+        <div class="photo-container">
+          <img src="Fotos/perfil.jpg" alt="Foto de Miguel Trejo">
+          <div class="photo-glow"></div>
+        </div>
+        <div class="about-info">
+          <h3>Enfoque en Soluciones Eficientes &amp; Lógica Backend</h3>
+          <p>Llevo 2 años programando y me caracterizo por mi alta capacidad de adaptación a distintos lenguajes y arquitecturas de software según la problemática a resolver.</p>
+          <p>Lo que más me apasiona del desarrollo es crear sistemas eficientes y consistentes que reduzcan tiempos de espera, optimicen inventarios y resuelvan las necesidades reales de los usuarios e industrias.</p>
+          
+          <div class="metrics">
+            <div class="metric-card">
+              <span class="metric-number">2+</span>
+              <span class="metric-label">Años de Experiencia</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">3</span>
+              <span class="metric-label">Proyectos Clave</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">100%</span>
+              <span class="metric-label">Adaptabilidad Técnica</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" class="section alt-bg">
+    <div class="container">
+      <h2 class="section-title">Galería de Proyectos</h2>
+      <div class="slider-container">
+        <div class="slider-track" id="sliderTrack">
+          <div class="slide active">
+            <img src="Fotos/Avistock.jpg" alt="Aviestock POS">
+            <div class="slide-caption">Aviestock — Sistema POS &amp; Control de Inventario</div>
+          </div>
+          <div class="slide">
+            <img src="Fotos/Clean Word.webp" alt="Clean World">
+            <div class="slide-caption">Clean World — Reciclaje de PET a Filamento 3D</div>
+          </div>
+          <div class="slide">
+            <img src="Fotos/mercUp.avif" alt="MercUp">
+            <div class="slide-caption">MercUp — Plataforma Estudiantil Multiplataforma</div>
+          </div>
+        </div>
+        <button class="slider-btn prev" id="prevBtn" aria-label="Anterior">&#10094;</button>
+        <button class="slider-btn next" id="nextBtn" aria-label="Siguiente">&#10095;</button>
+      </div>
+      <div class="slider-dots-wrapper">
+        <div class="slider-dots" id="sliderDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades" class="section">
+    <div class="container">
+      <h2 class="section-title">Habilidades Técnicas</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-head">
+            <span class="skill-name">Java / Javalin (Backend Framework)</span>
+            <span class="skill-val">88%</span>
+          </div>
+          <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-head">
+            <span class="skill-name">MySQL &amp; Modelado de Datos</span>
+            <span class="skill-val">85%</span>
+          </div>
+          <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-head">
+            <span class="skill-name">Frontend Nativo (HTML5 / CSS3 / JS)</span>
+            <span class="skill-val">82%</span>
+          </div>
+          <div class="progress-bar"><div class="progress" style="width: 82%;"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-head">
+            <span class="skill-name">Lógica de Negocio &amp; Arquitectura</span>
+            <span class="skill-val">90%</span>
+          </div>
+          <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" class="section alt-bg">
+    <div class="container">
+      <h2 class="section-title">Mis Proyectos</h2>
+      
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="backend">Punto de Venta / Backend</button>
+        <button class="filter-btn" data-filter="web">Web &amp; Hardware</button>
+        <button class="filter-btn" data-filter="multi">Multiplataforma</button>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card" data-category="backend" 
+             data-title="Aviestock — POS &amp; Sistema de Control" 
+             data-desc="Sistema de punto de venta en línea que optimiza tiempos de producción, evita pérdidas de datos e información, gestiona el inventario y lleva el control del estado financiero al cierre de cada turno." 
+             data-tech="Java, Javalin, MySQL, HTML5, CSS3, JS Nativo" 
+             data-img="Fotos/Avistock.jpg">
+          <img src="Fotos/Avistock.jpg" alt="Aviestock POS">
+          <div class="project-body">
+            <h3>Aviestock — Sistema POS</h3>
+            <p>Punto de venta enfocado en optimizar tiempos de espera, inventario y cierres de turno sin pérdida de datos.</p>
+            <span class="card-link">Ver Detalles &rarr;</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web" 
+             data-title="Clean World (Mundo Limpio)" 
+             data-desc="Máquina y proyecto sustentable desarrollado en equipo que transforma botellas de plástico PET en filamento para impresoras 3D. Colaboré en el diseño de la máquina y en el sitio web promocional con tecnologías nativas." 
+             data-tech="Diseño Técnico, HTML5, CSS3, JS Nativo" 
+             data-img="Fotos/Clean Word.webp">
+          <img src="Fotos/Clean Word.webp" alt="Clean World">
+          <div class="project-body">
+            <h3>Clean World / Mundo Limpio</h3>
+            <p>Proyecto sustentable de reciclaje de PET a filamento 3D con plataforma web promocional.</p>
+            <span class="card-link">Ver Detalles &rarr;</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="multi" 
+             data-title="MercUp (En Desarrollo)" 
+             data-desc="Plataforma específica enfocada en la comunidad estudiantil. Actualmente se encuentra en etapa de diseño de arquitectura y prototipado multiplataforma." 
+             data-tech="Diseño de Arquitectura, Multiplataforma, Frontend / Backend" 
+             data-img="Fotos/mercUp.avif">
+          <img src="Fotos/mercUp.avif" alt="MercUp">
+          <div class="project-body">
+            <h3>MercUp — Red Estudiantil</h3>
+            <p>Plataforma multiplataforma diseñada para estudiantes (Actualmente en etapa de diseño).</p>
+            <span class="card-link">Ver Detalles &rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section">
+    <div class="container">
+      <h2 class="section-title">Contacto Directo</h2>
+      <p class="section-sub">Ponte en contacto conmigo para proyectos, colaboraciones o consultorías.</p>
+      
+      <div class="contact-cards">
+        <a href="mailto:henri.miguel.trejo@gmail.com" class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <h3>Correo Electrónico</h3>
+          <p>henri.miguel.trejo@gmail.com</p>
+        </a>
+
+        <a href="https://wa.me/529651154179" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">💬</div>
+          <h3>WhatsApp / Teléfono</h3>
+          <p>+52 965 115 4179</p>
+        </a>
+
+        <a href="https://github.com/HENRINT" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">💻</div>
+          <h3>GitHub</h3>
+          <p>github.com/HENRINT</p>
+        </a>
+
+        <a href="https://www.instagram.com/din0_m0ta/" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">📸</div>
+          <h3>Instagram</h3>
+          <p>@din0_m0ta</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Miguel Trejo. Desarrollador Full Stack &amp; Backend Specialist.</p>
+  </footer>
+
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <img id="modalImg" src="" alt="Detalle del proyecto">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <div class="modal-tech"><strong>Tecnologías:</strong> <span id="modalTech"></span></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
