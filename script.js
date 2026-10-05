@@ -1,4 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+  const navLinksList = document.querySelectorAll(".nav-links a");
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+      navToggle.classList.toggle("open");
+    });
+
+    navLinksList.forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        navToggle.classList.remove("open");
+      });
+    });
+  }
+
   const track = document.getElementById("sliderTrack");
   const slides = document.querySelectorAll(".slide");
   const prevBtn = document.getElementById("prevBtn");
