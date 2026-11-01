@@ -21,9 +21,8 @@
     </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#sobre-mi">Sobre Mí</a></li>
-      <li><a href="#galeria">Galería</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </div>
@@ -61,8 +60,8 @@
             <span class="metric-label">Años de Experiencia</span>
           </div>
           <div class="metric-card">
-            <span class="metric-number">3</span>
-            <span class="metric-label">Proyectos Clave</span>
+            <span class="metric-number" id="projectCount">—</span>
+            <span class="metric-label">Proyectos Principales</span>
           </div>
           <div class="metric-card">
             <span class="metric-number">100%</span>
@@ -74,34 +73,41 @@
   </div>
 </section>
 
-<section id="galeria" class="section alt-bg">
+<section id="proyectos" class="section">
   <div class="container">
-    <h2 class="section-title">Galería de Proyectos</h2>
-    <div class="slider-container">
-      <div class="slider-track" id="sliderTrack">
-        <div class="slide active">
-          <img src="Fotos/Avistock.jpg" alt="Aviestock POS">
-          <div class="slide-caption">Aviestock — Sistema POS &amp; Control de Inventario</div>
-        </div>
-        <div class="slide">
-          <img src="Fotos/Clean Word.webp" alt="Clean World">
-          <div class="slide-caption">Clean World — Reciclaje de PET a Filamento 3D</div>
-        </div>
-        <div class="slide">
-          <img src="Fotos/mercUp.avif" alt="MercUp">
-          <div class="slide-caption">MercUp — Plataforma Estudiantil Multiplataforma</div>
-        </div>
-      </div>
-      <button class="slider-btn prev" id="prevBtn" aria-label="Anterior">&#10094;</button>
-      <button class="slider-btn next" id="nextBtn" aria-label="Siguiente">&#10095;</button>
+    <h2 class="section-title">Mis Proyectos</h2>
+    <p class="section-sub">Soluciones reales, resultados medibles y tecnologías aplicadas.</p>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="backend">Punto de Venta / Backend</button>
+      <button class="filter-btn" data-filter="web">Web &amp; Hardware</button>
+      <button class="filter-btn" data-filter="multi">Multiplataforma</button>
     </div>
-    <div class="slider-dots-wrapper">
-      <div class="slider-dots" id="sliderDots"></div>
-    </div>
+
+    <p class="projects-status" id="projectsStatus" role="status" aria-live="polite">Cargando proyectos...</p>
+    <button class="btn btn-secondary projects-retry" id="projectsRetry" type="button" hidden>Reintentar</button>
+    <div class="projects-grid" id="projectsGrid" aria-busy="true"></div>
   </div>
 </section>
+<template id="projectCardTemplate">
+  <article class="project-card">
+    <img class="project-image" alt="" loading="lazy">
+    <div class="project-body">
+      <span class="project-category"></span>
+      <h3 class="project-title"></h3>
+      <p class="project-impact"></p>
+      <p class="project-description"></p>
+      <ul class="project-technologies" aria-label="Tecnologías"></ul>
+      <div class="project-actions">
+        <button class="project-details btn btn-primary" type="button">Ver detalles</button>
+        <a class="project-repo btn btn-secondary" target="_blank" rel="noopener noreferrer" hidden>Ver código</a>
+      </div>
+    </div>
+  </article>
+</template>
 
-<section id="habilidades" class="section">
+<section id="habilidades" class="section alt-bg">
   <div class="container">
     <h2 class="section-title">Habilidades Técnicas</h2>
     <div class="skills-grid">
@@ -132,60 +138,6 @@
           <span class="skill-val">90%</span>
         </div>
         <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="proyectos" class="section alt-bg">
-  <div class="container">
-    <h2 class="section-title">Mis Proyectos</h2>
-    
-    <div class="filters">
-      <button class="filter-btn active" data-filter="all">Todos</button>
-      <button class="filter-btn" data-filter="backend">Punto de Venta / Backend</button>
-      <button class="filter-btn" data-filter="web">Web &amp; Hardware</button>
-      <button class="filter-btn" data-filter="multi">Multiplataforma</button>
-    </div>
-
-    <div class="projects-grid">
-      <div class="project-card" data-category="backend" 
-           data-title="Aviestock — POS &amp; Sistema de Control" 
-           data-desc="Sistema de punto de venta en línea que optimiza tiempos de producción, evita pérdidas de datos e información, gestiona el inventario y lleva el control del estado financiero al cierre de cada turno." 
-           data-tech="Java, Javalin, MySQL, HTML5, CSS3, JS Nativo" 
-           data-img="Fotos/Avistock.jpg">
-        <img src="Fotos/Avistock.jpg" alt="Aviestock POS">
-        <div class="project-body">
-          <h3>Aviestock — Sistema POS</h3>
-          <p>Punto de venta enfocado en optimizar tiempos de espera, inventario y cierres de turno sin pérdida de datos.</p>
-          <span class="card-link">Ver Detalles &rarr;</span>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="web" 
-           data-title="Clean World (Mundo Limpio)" 
-           data-desc="Máquina y proyecto sustentable desarrollado en equipo que transforma botellas de plástico PET en filamento para impresoras 3D. Colaboré en el diseño de la máquina y en el sitio web promocional con tecnologías nativas." 
-           data-tech="Diseño Técnico, HTML5, CSS3, JS Nativo" 
-           data-img="Fotos/Clean Word.webp">
-        <img src="Fotos/Clean Word.webp" alt="Clean World">
-        <div class="project-body">
-          <h3>Clean World / Mundo Limpio</h3>
-          <p>Proyecto sustentable de reciclaje de PET a filamento 3D con plataforma web promocional.</p>
-          <span class="card-link">Ver Detalles &rarr;</span>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="multi" 
-           data-title="MercUp (En Desarrollo)" 
-           data-desc="Plataforma específica enfocada en la comunidad estudiantil. Actualmente se encuentra en etapa de diseño de arquitectura y prototipado multiplataforma." 
-           data-tech="Diseño de Arquitectura, Multiplataforma, Frontend / Backend" 
-           data-img="Fotos/mercUp.avif">
-        <img src="Fotos/mercUp.avif" alt="MercUp">
-        <div class="project-body">
-          <h3>MercUp — Red Estudiantil</h3>
-          <p>Plataforma multiplataforma diseñada para estudiantes (Actualmente en etapa de diseño).</p>
-          <span class="card-link">Ver Detalles &rarr;</span>
-        </div>
       </div>
     </div>
   </div>
